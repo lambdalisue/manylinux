@@ -25,6 +25,8 @@ matrix:
      env: PLATFORM="i686"
    - arch: arm64
      env: PLATFORM="aarch64"
+   - arch: arm64
+     env: PLATFORM="armv7l"
    - arch: ppc64le
      env: PLATFORM="ppc64le"
    - arch: s390x

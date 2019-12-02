@@ -68,8 +68,8 @@ elif [ "${AUDITWHEEL_ARCH}" == "aarch64" ] || [ "${AUDITWHEEL_ARCH}" == "ppc64le
     # Software collection (for devtoolset-8)
     yum -y install centos-release-scl-rh
     TOOLCHAIN_DEPS=${DEVTOOLSET8_TOOLCHAIN_DEPS}
-elif [ "${AUDITWHEEL_ARCH}" == "i686" ]; then
-    # No yasm, no devtoolset-8 on i686
+elif [ "${AUDITWHEEL_ARCH}" == "i686" ] || [ "${AUDITWHEEL_ARCH}" == "armv7l" ]; then
+    # No yasm, no devtoolset-8 on i686/armv7l
     TOOLCHAIN_DEPS=${DEFAULT_TOOLCHAIN_DEPS}
 fi
 
